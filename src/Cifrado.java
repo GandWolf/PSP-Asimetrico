@@ -12,13 +12,22 @@ import java.util.Base64;
  * Created by gand on 15/02/17.
  */
 public class Cifrado {
-    String almacen = "/home/gand/.keystore";
-    char[] passAlmacen = "usuario".toCharArray();
-    char[] passClaveP = "keygand".toCharArray();
-    String alias = "KEYGAND";
-    String fraseACifrar = "Frase de prueba";
-    String fraseCifrada;
-    String fraseDescifrada;
+    private String almacen;
+    private char[] passAlmacen;
+    private char[] passClaveP;
+    private String alias;
+    private String fraseACifrar;
+    private String fraseCifrada;
+    private String fraseDescifrada;
+
+    Cifrado (String almacen, String passAlmacen, String passClaveP, String alias, String fraseACifrar, String fraseCifrada){
+        this.almacen = almacen;
+        this.passAlmacen = passAlmacen.toCharArray();
+        this.passClaveP = passClaveP.toCharArray();
+        this.alias = alias;
+        this.fraseACifrar = fraseACifrar;
+        this.fraseCifrada = fraseCifrada;
+    }
 
     Cifrado (){}
 
